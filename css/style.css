@@ -453,19 +453,6 @@ body {
   width: 100%;
 }
 
-.tam-tag .form-tamtag {
-  display: flex;
-  justify-content: space-between;
-  /* background-color: rebeccapurple; */
-}
-
-.tam-tag .form-tamtag .input-box {
-  display: flex;
-  /* background-color: #007bff; */
-  width: 25%;
-  flex-direction: column;
-}
-
 .per .per-items {
   margin-bottom: 30px;
   /* background-color: rebeccapurple; */
@@ -475,8 +462,16 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-radius: 15px;
+  padding: 5px;
   font-size: 20px;
   font-weight: bold;
+}
+
+.per .per-items .per-tag-title:hover {
+  cursor: pointer;
+  background-color: #222831;
+  color: #eeeeee;
 }
 
 .per .per-items .per-tag-title i {
@@ -553,16 +548,39 @@ body {
   width: 100%;
   margin: 0px !important;
   padding: 0px !important;
-  background-color: #007bff;
+  /* background-color: #007bff; */
 }
 
 .sem-tag .list-tagihan .tagihan {
   text-decoration: none;
   list-style: none;
-  padding: 10px;
-  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #eeeeee;
+  padding: 10px 18px;
+  border-radius: 25px;
   background-color: #00adb5;
 }
+
+.sem-tag .list-tagihan .tagihan .tanggal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.sem-tag .form-tamtag {
+  display: flex;
+  justify-content: space-between;
+  /* background-color: rebeccapurple; */
+}
+
+.sem-tag .form-tamtag .input-box {
+  display: flex;
+  /* background-color: #007bff; */
+  width: 25%;
+  flex-direction: column;
+}
+
 /* Media Query */
 
 @media screen {
