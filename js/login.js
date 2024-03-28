@@ -21,3 +21,8 @@ let goToDashboard = document.getElementById("masuk");
 goToDashboard.onclick = function () {
   window.location.href = "index.html";
 };
+
+let myWScreen = window.screen.width;
+let myHScreen = window.screen.height;
+console.log("W : "+ myWScreen);
+console.log("H : "+ myHScreen);

@@ -111,6 +111,8 @@
 }
 
 #masuk {
+  margin: 0px 100px;
+  padding: 10px 30px;
   font-weight: bold;
   background-color: transparent !important;
 }
@@ -121,5 +123,74 @@
   color: gray !important;
 }
 
-@media screen {
+/* W = 1260px */
+@media screen and (min-width: 1260px) {
+  .main-content .form-login .login-header {
+    padding-bottom: 100px !important;
+  }
+
+  .main-content .form-login {
+    width: calc(50vw - 30px);
+    height: calc(50vw - 30px);
+  }
+
+  .main-content .name {
+    font-size: 42px;
+  }
+
+  .main-content .form-login .login-header {
+    font-size: 35px;
+  }
+
+  .main-login .main-section .input-span {
+    font-size: 25px;
+  }
+
+  .main-login .main-section .input {
+    font-size: 20px;
+  }
+
+  #masuk {
+    font-size: 18px;
+  }
+
+  .form-login .main-login .hub-admin {
+    font-size: 18px !important;
+  }
+}
+
+/* W = 1600px */
+@media screen and (min-width: 1600px) {
+  .main-content .form-login .login-header {
+    padding-bottom: 125px !important;
+  }
+
+  .main-content .form-login {
+    width: calc(50vw - 100px);
+    height: calc(50vw - 100px);
+  }
+
+  .main-content .name {
+    font-size: 52px;
+  }
+
+  .main-content .form-login .login-header {
+    font-size: 45px;
+  }
+
+  .main-login .main-section .input-span {
+    font-size: 35px;
+  }
+
+  .main-login .main-section .input {
+    font-size: 20px;
+  }
+
+  #masuk {
+    font-size: 20px;
+  }
+
+  .form-login .main-login .hub-admin {
+    font-size: 20px !important;
+  }
 }

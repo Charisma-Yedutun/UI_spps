@@ -54,3 +54,27 @@
 //   // Membersihkan Input Keterangan
 //   document.getElementById("keterangan").value = "";
 // };
+
+// Panel Tambah Tagihan
+let bgTag = document.getElementById("tagBg");
+let pnTag = document.getElementById("tagPn");
+let openTag = document.getElementById("tagOpen");
+let closeTag = document.getElementById("tagClose");
+
+closeTag.onclick = function () {
+  pnTag.style.display = "none";
+  bgTag.style.display = "none";
+  document.body.style.overflow = "auto";
+};
+
+bgTag.onclick = function () {
+  pnTag.style.display = "none";
+  bgTag.style.display = "none";
+  document.body.style.overflow = "auto";
+};
+
+openTag.onclick = function () {
+  pnTag.style.display = "block";
+  bgTag.style.display = "block";
+  document.body.style.overflow = "hidden";
+};

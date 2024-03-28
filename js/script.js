@@ -16,38 +16,38 @@ toggleBtn.onclick = function () {
 };
 
 // buka-tutup tag-dropdown_menu (sidebar)
-let tag_dropdown = document.getElementById("dropdown-tag");
-let tag_toggle = document.getElementById("tag-items");
-let tag_icon = document.getElementById("dd-icon");
+// let tag_dropdown = document.getElementById("dropdown-tag");
+// let tag_toggle = document.getElementById("tag-items");
+// let tag_icon = document.getElementById("dd-icon");
 
-tag_dropdown.onclick = function () {
-  if (tag_toggle.classList.contains("update")) {
-    tag_icon.style.transform = "rotate(0deg)";
-    tag_toggle.classList.remove("tag-active");
-    tag_toggle.classList.add("tag-non-active");
-    tag_toggle.classList.add("dropdown-con");
-    tag_toggle.classList.remove("update");
-  } else if (
-    !tag_toggle.classList.contains("update") &&
-    sidebar.classList.contains("active")
-  ) {
-    tag_icon.style.transform = "rotate(-180deg)";
-    tag_toggle.classList.add("tag-active");
-    tag_toggle.classList.remove("tag-non-active");
-    tag_toggle.classList.remove("dropdown-con");
-    tag_toggle.classList.add("update");
-  } else if (
-    !tag_toggle.classList.contains("update") &&
-    !sidebar.classList.contains("active")
-  ) {
-    tag_icon.style.transform = "rotate(-180deg)";
-    sidebar.classList.toggle("active");
-    tag_toggle.classList.add("tag-active");
-    tag_toggle.classList.remove("tag-non-active");
-    tag_toggle.classList.remove("dropdown-con");
-    tag_toggle.classList.add("update");
-  }
-};
+// tag_dropdown.onclick = function () {
+//   if (tag_toggle.classList.contains("update")) {
+//     tag_icon.style.transform = "rotate(0deg)";
+//     tag_toggle.classList.remove("tag-active");
+//     tag_toggle.classList.add("tag-non-active");
+//     tag_toggle.classList.add("dropdown-con");
+//     tag_toggle.classList.remove("update");
+//   } else if (
+//     !tag_toggle.classList.contains("update") &&
+//     sidebar.classList.contains("active")
+//   ) {
+//     tag_icon.style.transform = "rotate(-180deg)";
+//     tag_toggle.classList.add("tag-active");
+//     tag_toggle.classList.remove("tag-non-active");
+//     tag_toggle.classList.remove("dropdown-con");
+//     tag_toggle.classList.add("update");
+//   } else if (
+//     !tag_toggle.classList.contains("update") &&
+//     !sidebar.classList.contains("active")
+//   ) {
+//     tag_icon.style.transform = "rotate(-180deg)";
+//     sidebar.classList.toggle("active");
+//     tag_toggle.classList.add("tag-active");
+//     tag_toggle.classList.remove("tag-non-active");
+//     tag_toggle.classList.remove("dropdown-con");
+//     tag_toggle.classList.add("update");
+//   }
+// };
 
 // Tampilkan Waktu (Awal)
 function tampilkanJam() {

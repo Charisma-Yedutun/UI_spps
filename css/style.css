@@ -421,6 +421,7 @@ body {
 /* Dashboard Chart */
 .main-content .chart-container {
   position: relative;
+  z-index: -1;
   display: flex;
   width: 100%;
   justify-content: center;
@@ -441,104 +442,107 @@ body {
 }
 
 /* ................................................................................................. */
-/* Tambah Tagihan */
-.tam-tag {
-  display: flex;
-  flex-direction: column;
-}
-
-.tam-tag .per {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.per .per-items {
-  margin-bottom: 30px;
-  /* background-color: rebeccapurple; */
-}
-
-.per .per-items .per-tag-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 15px;
-  padding: 5px;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.per .per-items .per-tag-title:hover {
-  cursor: pointer;
-  background-color: #222831;
-  color: #eeeeee;
-}
-
-.per .per-items .per-tag-title i {
-  transition: all 0.3s ease;
-}
-
-.per-items .form-per-con {
-  /* position: relative; */
-  display: flex;
-  height: 500px;
-  flex-direction: column;
-  /* background-color: #007bff; */
-}
-
-.per-items .form-per-con.active {
-  animation: tam-tag-ddout 0.3s ease forwards;
-}
-
-.per-items .form-per-con.active .input-text {
-  display: none;
-}
-
-@keyframes tam-tag-ddout {
-  0% {
-    height: 500px;
-  }
-  50% {
-    height: calc(500px * 50%);
-  }
-  100% {
-    height: 0px;
-  }
-}
-
-.tam-tag .per .input-text {
-  display: flex;
-  flex-direction: column;
-  margin: 5px 10px;
-  transition: all 1s ease;
-}
-
-.per .input-text span {
-  text-align: right;
-}
-
-.per .input-text input {
-  border-width: 0 0 2px 0;
-  border-color: black;
-  padding: 5px 5px;
-}
-
-.tam-tag .per .btn-per {
-  display: flex;
-  justify-content: end;
-  gap: 30px;
-  margin-top: 20px;
-}
-
-.per-items .form-per-con.active .btn-per {
-  display: none;
-}
-
-/* ................................................................................................. */
 /* Semua Tagihan */
 .sem-tag {
   display: flex;
   flex-direction: column;
+}
+
+.sem-tag .con-tambah {
+  display: flex;
+  width: 100%;
+  justify-content: end;
+  align-items: center;
+  margin-bottom: 20px;
+  /* background-color: #007bff; */
+}
+
+.sem-tag .con-tambah .btn-tam-tag {
+  font-size: 34px !important;
+  font-weight: bold !important;
+  border: 2px solid;
+  border-radius: 35% !important;
+  background-color: transparent !important;
+  color: #198754 !important;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+}
+
+.sem-tag .con-tambah .btn-tam-tag:hover {
+  background-color: #198754 !important;
+  color: white !important;
+}
+
+.bg-tam-tag {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 78px;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  z-index: 5;
+  overflow: hidden;
+  align-self: center;
+  background-color: black;
+  opacity: 0.7;
+}
+
+.pn-tam-tag {
+  position: fixed;
+  display: none;
+  z-index: 6;
+  flex-direction: column;
+  top: 0;
+  left: 78px;
+  right: 0;
+  bottom: 0;
+  margin: 30px 250px;
+  border-radius: 24px;
+  background-color: #11101d;
+  padding: 20px 15px;
+  color: white;
+}
+
+.pn-tam-tag .close-pn-tag button {
+  color: white;
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+
+.pn-tam-tag .close-pn-tag button:hover {
+  transform: rotate(180deg);
+}
+
+.pn-tam-tag .header-pn-tag {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.pn-tam-tag .header-pn-tag button {
+  border: none;
+  background-color: transparent !important;
+}
+
+.pn-tam-tag .main-pn-tag .input-text {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 10px;
+}
+
+.main-pn-tag .input-text span {
+  text-align: right;
+}
+
+.main-pn-tag .input-text input {
+  border-width: 0 0 2px 0;
+  border-color: black;
+  padding: 5px 5px;
 }
 
 .sem-tag .list-tagihan {
@@ -581,7 +585,23 @@ body {
   flex-direction: column;
 }
 
+/* ................................................................................................. */
+/* Master Data */
+.master-data {
+  display: flex;
+  flex-direction: column;
+}
+
 /* Media Query */
 
-@media screen {
+@media screen and (max-width: 1024px) {
+  /* .sem-tag .btn-tam-tag {
+    position: fixed;
+    top: 0;
+    right: 0;
+    font-size: 20px !important;
+    padding: 10px 15px !important;
+    margin: 120px 10px !important;
+    box-shadow: 0px 0px 8px 2px rgba(16, 65, 27, 0.8);
+  } */
 }
