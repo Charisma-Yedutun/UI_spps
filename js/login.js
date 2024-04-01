@@ -1,28 +1,21 @@
-let slideImages = document.querySelectorAll("img");
+let hide = document.getElementById("hide");
+let pass = document.getElementById("password");
 
-let counter = 0;
+let tampil = true;
 
-const autoSliding = () => {
-  setInterval(() => {
-    slideImages[counter].style.animation = "next1 1s ease-in forwards";
-    if (counter >= slideImages.length - 1) {
-      counter = 0;
-    } else {
-      counter++;
-    }
-    slideImages[counter].style.animation = "next2 1s ease-in forwards";
-  }, 5000);
+hide.onclick = function () {
+  if (tampil) {
+    pass.setAttribute("type", "text");
+    hide.setAttribute("src", "../assets/icons/eye-slash.svg");
+    tampil = !tampil;
+  } else {
+    pass.setAttribute("type", "password");
+    hide.setAttribute("src", "../assets/icons/eye.svg");
+    tampil = !tampil;
+  }
 };
 
-autoSliding();
-
-let goToDashboard = document.getElementById("masuk");
-
-goToDashboard.onclick = function () {
+let masuk = document.getElementById("masuk");
+masuk.onclick = function () {
   window.location.href = "index.html";
 };
-
-let myWScreen = window.screen.width;
-let myHScreen = window.screen.height;
-console.log("W : "+ myWScreen);
-console.log("H : "+ myHScreen);

@@ -1,51 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="../assets/logoSekolah.png" />
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>SPPS Pelita Hati</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/x-icon" href="../assets/logoSekolah.png" />
-  <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-  <link rel="stylesheet" href="../css/style.css" />
-  <title>SPPS Pelita Hati</title>
-</head>
-
-<body id="body">
-  <!-- Start Sidebar -->
-  <div class="sidebar">
-    <div class="user_content">
-      <div class="user gap-3 ps-2">
-        <i class="bi bi-person-circle fs-2"></i>
-        <span class="user_name">Admin</span>
+  <body id="body">
+    <!-- Start Sidebar -->
+    <div class="sidebar">
+      <div class="user_content">
+        <div class="user gap-3 ps-2">
+          <i class="bi bi-person-circle fs-2"></i>
+          <span class="user_name">Admin</span>
+        </div>
+        <i class="bi bi-list" id="btn"></i>
       </div>
-      <i class="bi bi-list" id="btn"></i>
-    </div>
-    <ul class="nav_list">
-      <li>
-        <a href="index.html">
-          <i class="bi bi-grid"></i>
-          <span class="links_name">Dashboard</span>
-        </a>
-        <span class="tooltip">Dashboard</span>
-      </li>
-      <li>
-        <a href="#">
-          <i class="bi bi-whatsapp"></i>
-          <span class="links_name">Whatsapp</span>
-        </a>
-        <span class="tooltip">Whatsapp</span>
-      </li>
+      <ul class="nav_list">
+        <li>
+          <a href="index.html">
+            <i class="bi bi-grid"></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+          <span class="tooltip">Dashboard</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bi bi-whatsapp"></i>
+            <span class="links_name">Whatsapp</span>
+          </a>
+          <span class="tooltip">Whatsapp</span>
+        </li>
 
-      <!-- tagihan dropdown (awal)-->
-      <li>
-        <a href="semua_tag.html">
-          <i class="bi bi-cash-stack"></i>
-          <span class="links_name">Tagihan</span>
-        </a>
-        <span class="tooltip">Tagihan</span>
-      </li>
-      <!-- <div id="tag-items" class="dropdown-con">
+        <!-- tagihan dropdown (awal)-->
+        <li>
+          <a href="semua_tag.html">
+            <i class="bi bi-cash-stack"></i>
+            <span class="links_name">Tagihan</span>
+          </a>
+          <span class="tooltip">Tagihan</span>
+        </li>
+        <!-- <div id="tag-items" class="dropdown-con">
         <li>
           <a href="tambah_tag.html">
             <i class="bi bi-receipt"></i>
@@ -61,92 +63,246 @@
           <span class="tooltip">Semua Tagihan</span>
         </li>
       </div> -->
-      <!-- tagihan dropdown (akhir)-->
+        <!-- tagihan dropdown (akhir)-->
 
-      <li>
-        <a href="#">
-          <i class="bi bi-cash-coin"></i>
-          <span class="links_name">Pemasukan</span>
+        <li>
+          <a href="#">
+            <i class="bi bi-cash-coin"></i>
+            <span class="links_name">Pemasukan</span>
+          </a>
+          <span class="tooltip">Pemasukan</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bi bi-wallet"></i>
+            <span class="links_name">Pengeluaran</span>
+          </a>
+          <span class="tooltip">Pengeluaran</span>
+        </li>
+        <li>
+          <a href="masterdata.html">
+            <i class="bi bi-database"></i>
+            <span class="links_name">Master Data</span>
+          </a>
+          <span class="tooltip">Master Data</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bi bi-gear"></i>
+            <span class="links_name">Pengaturan Pengguna</span>
+          </a>
+          <span class="tooltip">Pengaturan</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bi bi-info-circle"></i>
+            <span class="links_name">Informasi</span>
+          </a>
+          <span class="tooltip">Informasi</span>
+        </li>
+      </ul>
+      <div class="logout">
+        <a href="login.html">
+          <div class="logoutbtn">
+            <div class="logout_details">Log-Out</div>
+            <i class="bi bi-box-arrow-left" id="log_out"></i>
+          </div>
         </a>
-        <span class="tooltip">Pemasukan</span>
-      </li>
-      <li>
-        <a href="#">
-          <i class="bi bi-wallet"></i>
-          <span class="links_name">Pengeluaran</span>
-        </a>
-        <span class="tooltip">Pengeluaran</span>
-      </li>
-      <li>
-        <a href="masterdata.html">
-          <i class="bi bi-database"></i>
-          <span class="links_name">Master Data</span>
-        </a>
-        <span class="tooltip">Master Data</span>
-      </li>
-      <li>
-        <a href="#">
-          <i class="bi bi-gear"></i>
-          <span class="links_name">Pengaturan Pengguna</span>
-        </a>
-        <span class="tooltip">Pengaturan</span>
-      </li>
-      <li>
-        <a href="#">
-          <i class="bi bi-info-circle"></i>
-          <span class="links_name">Informasi</span>
-        </a>
-        <span class="tooltip">Informasi</span>
-      </li>
-    </ul>
-    <div class="logout">
-      <a href="login.html">
-        <div class="logoutbtn">
-          <div class="logout_details">Log-Out</div>
-          <i class="bi bi-box-arrow-left" id="log_out"></i>
-        </div>
-      </a>
+      </div>
     </div>
-  </div>
-  <!-- End Sidebar -->
+    <!-- End Sidebar -->
 
-  <!-- Start Content -->
-  <div class="home_content">
-    <!-- Start Navbar -->
-    <nav class="navbar rounded-start-4">
-      <div class="navbar-brand fs-3 fw-bold gap-3 ps-3 text-white">
-        <img src="../assets/logoSekolah.png" alt="" width="50px" />
-        <a href="#" class="text-white text-decoration-none">SD Pelita Hati</a>
-      </div>
-      <div class="nav-navbar d-flex align-self-stretch align-items-center gap-5 me-4 fw-bold text-white">
-        <div class="notif d-flex flex-row mx-3">
-          <a href="#" class="text-white"><i class="bi bi-whatsapp"></i></a>
-          <a href="#" class="text-white"><i class="bi bi-bell-fill"></i></a>
+    <!-- Start Content -->
+    <div class="home_content">
+      <!-- Start Navbar -->
+      <nav class="navbar rounded-start-4">
+        <div class="navbar-brand fs-3 fw-bold gap-3 ps-3 text-white">
+          <img src="../assets/logoSekolah.png" alt="" width="50px" />
+          <a href="#" class="text-white text-decoration-none">SD Pelita Hati</a>
         </div>
-        <div class="jam d-flex flex-row gap-3">
-          <i class="bi" id="logoJam"></i>
-          <div class="d-inline-block" id="jam"></div>
+        <div
+          class="nav-navbar d-flex align-self-stretch align-items-center gap-5 me-4 fw-bold text-white"
+        >
+          <div class="notif d-flex flex-row mx-3">
+            <a href="#" class="text-white"><i class="bi bi-whatsapp"></i></a>
+            <a href="#" class="text-white"><i class="bi bi-bell-fill"></i></a>
+          </div>
+          <div class="jam d-flex flex-row gap-3">
+            <i class="bi" id="logoJam"></i>
+            <div class="d-inline-block" id="jam"></div>
+          </div>
         </div>
-      </div>
-    </nav>
-    <!-- End Navbar -->
+      </nav>
+      <!-- End Navbar -->
 
-    <!-- Start Semua Tagihan -->
-    <div class="main-content">
-      <div class="header h-auto">
-        <span class="d-block w-100 fs-2 pb-3 fw-bold">Master Data</span>
+      <!-- Start Semua Tagihan -->
+      <div class="main-content">
+        <div class="header h-auto">
+          <span class="d-block w-100 fs-2 pb-3 fw-bold">Master Data</span>
+        </div>
+        <span class="mt-3">Tambah Akun dengan Role : </span>
+        <ul class="nav nav-tabs justify-content-around">
+          <li class="nav-item w-25">
+            <a
+              id="master-murid"
+              class="nav-link text-center active"
+              aria-current="page"
+              href="#"
+              >Murid</a
+            >
+          </li>
+          <li class="nav-item w-25">
+            <a id="master-yayasan" class="nav-link text-center" href="#"
+              >Yayasan</a
+            >
+          </li>
+          <li class="nav-item w-25">
+            <a id="master-admin" class="nav-link text-center" href="#">Admin</a>
+          </li>
+        </ul>
+        <!-- <div class="master-data">
+          <div class="md-tam-siswa">
+            <span class="md-header">Tambah Akun Siswa</span>
+            <div class="input-group flex-nowrap mb-3 position-static">
+              <span class="input-group-text" id="addon-wrapping">NIS</span>
+              <input
+                type="text"
+                class="form-control position-static"
+                placeholder="Nomor Induk Siswa"
+                aria-label="NIS"
+                aria-describedby="addon-wrapping"
+              />
+            </div>
+
+            <div class="input-group mb-3 position-static">
+              <input
+                type="text"
+                class="form-control position-static"
+                placeholder="Nama Siswa/i"
+                aria-label="Nama Siswa/i"
+                aria-describedby="basic-addon2"
+              />
+              <span class="input-group-text position-static" id="basic-addon2"
+                >Nama</span
+              >
+            </div>
+
+            <div class="input-group mb-3">
+              <label
+                class="input-group-text position-static"
+                for="inputGroupSelect01"
+                >Jenis Kelamin</label
+              >
+              <select class="form-select" id="inputGroupSelect01">
+                <option value="1">Laki-laki</option>
+                <option value="2">Perempuan</option>
+              </select>
+            </div>
+
+            <div class="input-group mb-3">
+              <span class="input-group-text">+62</span>
+              <input
+                type="text"
+                class="form-control"
+                aria-label="nomor hp ortu/wali"
+                placeholder="858 XXXX XXXX"
+              />
+              <span class="input-group-text">No.HP Ortu</span>
+            </div>
+
+            <div class="input-group flex-nowrap mb-3">
+              <span class="input-group-text" id="addon-wrapping">Alamat</span>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Jl. xxxx, Komp. xxxx, No. xxxx"
+                aria-label="alamat"
+                aria-describedby="addon-wrapping"
+              />
+            </div>
+
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Kab/Kota, Provinsi"
+                aria-label="tempat lahir"
+                aria-describedby="basic-addon2"
+              />
+              <span class="input-group-text" id="basic-addon2"
+                >Tempat Lahir</span
+              >
+            </div>
+
+            <div class="input-group flex-nowrap mb-3">
+              <span class="input-group-text" id="addon-wrapping"
+                >Tanggal Lahir</span
+              >
+              <input
+                type="date"
+                class="form-control"
+                placeholder=""
+                aria-label="alamat"
+                aria-describedby="addon-wrapping"
+              />
+            </div>
+
+            <div class="input-group mb-3">
+              <select class="form-select" id="inputGroupSelect01">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+              <label class="input-group-text" for="inputGroupSelect01"
+                >Kelas</label
+              >
+            </div>
+
+            <div class="input-group mb-3">
+              <label class="input-group-text" for="inputGroupFile01"
+                >Foto</label
+              >
+              <input type="file" class="form-control" id="inputGroupFile01" />
+            </div>
+
+            <div class="input-group mb-3">
+              <input
+                type="password"
+                class="form-control"
+                placeholder="xxxxxxxx"
+                aria-describedby="basic-addon2"
+              />
+              <span class="input-group-text" id="basic-addon2">Password</span>
+            </div>
+
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon2"
+                >Confirm Password</span
+              >
+              <input
+                type="password"
+                class="form-control"
+                placeholder="xxxxxxxx"
+                aria-describedby="basic-addon2"
+              />
+            </div>
+          </div>
+          <div class="md-tam-yayasan">
+            <span class="md-header">Tambah Akun Yayasan</span>
+          </div>
+          <div class="md-tam-admin">
+            <span class="md-header">Tambah Akun Admin</span>
+          </div>
+        </div> -->
       </div>
-      <div class="master-data"></div>
+      <!-- End Semua Tagihan -->
     </div>
-    <!-- End Semua Tagihan -->
-  </div>
-  <!-- End Content -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
-  <script src="../bootstrap/js/bootstrap.js"></script>
-  <script src="../js/script.js"></script>
-  <script src="../js/sem_tag.js"></script>
-</body>
-
+    <!-- End Content -->
+    <script src="../bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/masterdata.js"></script>
+  </body>
 </html>

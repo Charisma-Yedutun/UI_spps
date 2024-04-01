@@ -4,193 +4,112 @@
   box-sizing: border-box;
 }
 
-.login-content {
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.login-content .slider {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-}
-
-.slider .slide img {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  object-fit: cover;
-}
-
-@keyframes next1 {
-  from {
-    left: 0%;
-  }
-
-  to {
-    left: -100%;
-  }
-}
-
-@keyframes next2 {
-  from {
-    left: 100%;
-  }
-
-  to {
-    left: 0%;
-  }
+.slide {
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  overflow: hidden !important;
 }
 
 .main-content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  overflow: hidden;
+  position: relative;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: end;
+  height: 100vh;
+  overflow: hidden !important;
 }
 
 .main-content .name {
   color: white;
-  font-size: 28px;
+  font-size: 38px;
+  /* letter-spacing: 15px; */
   font-weight: bold;
-  text-align: end;
+  text-align: center;
 }
 
 .main-content .form-login {
-  border: 2px solid #336633;
+  display: flex;
+  flex-direction: column;
+  align-self: center !important;
+  border: 3px solid #336633;
   border-radius: 24px;
-  /* background-color: orange; */
   width: 50vw;
-  height: 50vw;
+  height: 70vh;
+  color: white;
   margin: 20px;
   padding: 40px 10px;
 }
 
 .main-content .form-login .login-header {
   display: flex;
-  width: 100%;
-  justify-content: center;
-  font-size: 34px;
+  font-size: 40px;
+  letter-spacing: 10px;
   font-weight: bold;
-  color: white;
   text-align: center;
-  /* background-color: yellow; */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* background-color: #336633; */
+  width: 100%;
+  height: 30%;
 }
 
 .main-content .form-login .main-login {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  gap: 20px;
   width: 100%;
   height: 100%;
-  color: white;
-  padding: 0 60px;
-  /* background-color: green; */
+  gap: 20px;
+  padding: 0 20%;
+  flex-direction: column;
+  /* background-color: aqua; */
 }
 
 .form-login .main-login .main-section {
   display: flex;
+  width: 100%;
   flex-direction: column;
+  /* background-color: blue; */
 }
 
 .main-login .main-section .input-span {
-  font-size: 20px;
+  font-size: 18px;
+  text-align: end;
 }
 
-.main-login .main-section .input {
-  font-size: 15px;
-  padding: 8px;
+.main-login .main-section input {
   border: 1px solid #222831;
+  padding: 8px 10px;
   border-radius: 8px;
 }
 
+.con-hide {
+  display: flex;
+  justify-content: end;
+}
+
 #masuk {
-  margin: 0px 100px;
-  padding: 10px 30px;
-  font-weight: bold;
-  background-color: transparent !important;
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin-top: 30px;
 }
 
-#masuk:hover {
-  border-color: aquamarine !important;
-  background-color: aquamarine !important;
-  color: gray !important;
+#hide {
+  display: flex;
+  /* width: 10%; */
+  height: 20px;
+  color: white;
+  padding: 0 !important;
+  margin: 0 !important;
+  /* background-color: #336633; */
 }
 
-/* W = 1260px */
-@media screen and (min-width: 1260px) {
-  .main-content .form-login .login-header {
-    padding-bottom: 100px !important;
-  }
-
-  .main-content .form-login {
-    width: calc(50vw - 30px);
-    height: calc(50vw - 30px);
-  }
-
-  .main-content .name {
-    font-size: 42px;
-  }
-
-  .main-content .form-login .login-header {
-    font-size: 35px;
-  }
-
-  .main-login .main-section .input-span {
-    font-size: 25px;
-  }
-
-  .main-login .main-section .input {
-    font-size: 20px;
-  }
-
-  #masuk {
-    font-size: 18px;
-  }
-
-  .form-login .main-login .hub-admin {
-    font-size: 18px !important;
-  }
-}
-
-/* W = 1600px */
-@media screen and (min-width: 1600px) {
-  .main-content .form-login .login-header {
-    padding-bottom: 125px !important;
-  }
-
-  .main-content .form-login {
-    width: calc(50vw - 100px);
-    height: calc(50vw - 100px);
-  }
-
-  .main-content .name {
-    font-size: 52px;
-  }
-
-  .main-content .form-login .login-header {
-    font-size: 45px;
-  }
-
-  .main-login .main-section .input-span {
-    font-size: 35px;
-  }
-
-  .main-login .main-section .input {
-    font-size: 20px;
-  }
-
-  #masuk {
-    font-size: 20px;
-  }
-
-  .form-login .main-login .hub-admin {
-    font-size: 20px !important;
-  }
+#hide:hover {
+  cursor: pointer;
 }

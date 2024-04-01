@@ -1,463 +1,603 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="../assets/logoSekolah.png" />
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>SPPS Pelita Hati</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/x-icon" href="../assets/logoSekolah.png" />
-  <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-  <link rel="stylesheet" href="../css/style.css" />
-  <title>SPPS Pelita Hati</title>
-</head>
-
-<body id="body">
-  <!-- Start Sidebar -->
-  <div class="sidebar">
-    <div class="user_content">
-      <div class="user gap-3 ps-2">
-        <i class="bi bi-person-circle fs-2"></i>
-        <span class="user_name">Admin</span>
+  <body id="body">
+    <!-- Start Sidebar -->
+    <div class="sidebar">
+      <div class="user_content">
+        <div class="user gap-3 ps-2">
+          <i class="bi bi-person-circle fs-2"></i>
+          <span class="user_name">Admin</span>
+        </div>
+        <i class="bi bi-list" id="btn"></i>
       </div>
-      <i class="bi bi-list" id="btn"></i>
-    </div>
-    <ul class="nav_list">
-      <li>
-        <a href="index.html">
-          <i class="bi bi-grid"></i>
-          <span class="links_name">Dashboard</span>
-        </a>
-        <span class="tooltip">Dashboard</span>
-      </li>
-      <li>
-        <a href="#">
-          <i class="bi bi-whatsapp"></i>
-          <span class="links_name">Whatsapp</span>
-        </a>
-        <span class="tooltip">Whatsapp</span>
-      </li>
-
-      <!-- tagihan dropdown (awal)-->
-      <li>
-        <a href="semua_tag.html">
-          <i class="bi bi-cash-stack"></i>
-          <span class="links_name">Tagihan</span>
-        </a>
-        <span class="tooltip">Tagihan</span>
-      </li>
-      <!-- <div id="tag-items" class="dropdown-con">
+      <ul class="nav_list">
         <li>
-          <a href="tambah_tag.html">
-            <i class="bi bi-receipt"></i>
-            <span class="links_name">Tambah Tagihan</span>
+          <a href="index.html">
+            <i class="bi bi-grid"></i>
+            <span class="links_name">Dashboard</span>
           </a>
-          <span class="tooltip">Tambah Tagihan</span>
+          <span class="tooltip">Dashboard</span>
         </li>
+        <li>
+          <a href="#">
+            <i class="bi bi-whatsapp"></i>
+            <span class="links_name">Whatsapp</span>
+          </a>
+          <span class="tooltip">Whatsapp</span>
+        </li>
+
+        <!-- tagihan dropdown (awal)-->
         <li>
           <a href="semua_tag.html">
             <i class="bi bi-cash-stack"></i>
-            <span class="links_name">Semua Tagihan</span>
+            <span class="links_name">Tagihan</span>
           </a>
-          <span class="tooltip">Semua Tagihan</span>
+          <span class="tooltip">Tagihan</span>
         </li>
-      </div> -->
-      <!-- tagihan dropdown (akhir)-->
-
-      <li>
-        <a href="#">
-          <i class="bi bi-cash-coin"></i>
-          <span class="links_name">Pemasukan</span>
+        <li>
+          <a href="#">
+            <i class="bi bi-cash-coin"></i>
+            <span class="links_name">Pemasukan</span>
+          </a>
+          <span class="tooltip">Pemasukan</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bi bi-wallet"></i>
+            <span class="links_name">Pengeluaran</span>
+          </a>
+          <span class="tooltip">Pengeluaran</span>
+        </li>
+        <li>
+          <a href="masterdata.html">
+            <i class="bi bi-database"></i>
+            <span class="links_name">Master Data</span>
+          </a>
+          <span class="tooltip">Master Data</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bi bi-gear"></i>
+            <span class="links_name">Pengaturan Pengguna</span>
+          </a>
+          <span class="tooltip">Pengaturan</span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bi bi-info-circle"></i>
+            <span class="links_name">Informasi</span>
+          </a>
+          <span class="tooltip">Informasi</span>
+        </li>
+      </ul>
+      <div class="logout">
+        <a href="login.html">
+          <div class="logoutbtn">
+            <div class="logout_details">Log-Out</div>
+            <i class="bi bi-box-arrow-left" id="log_out"></i>
+          </div>
         </a>
-        <span class="tooltip">Pemasukan</span>
-      </li>
-      <li>
-        <a href="#">
-          <i class="bi bi-wallet"></i>
-          <span class="links_name">Pengeluaran</span>
-        </a>
-        <span class="tooltip">Pengeluaran</span>
-      </li>
-      <li>
-        <a href="masterdata.html">
-          <i class="bi bi-database"></i>
-          <span class="links_name">Master Data</span>
-        </a>
-        <span class="tooltip">Master Data</span>
-      </li>
-      <li>
-        <a href="#">
-          <i class="bi bi-gear"></i>
-          <span class="links_name">Pengaturan Pengguna</span>
-        </a>
-        <span class="tooltip">Pengaturan</span>
-      </li>
-      <li>
-        <a href="#">
-          <i class="bi bi-info-circle"></i>
-          <span class="links_name">Informasi</span>
-        </a>
-        <span class="tooltip">Informasi</span>
-      </li>
-    </ul>
-    <div class="logout">
-      <a href="login.html">
-        <div class="logoutbtn">
-          <div class="logout_details">Log-Out</div>
-          <i class="bi bi-box-arrow-left" id="log_out"></i>
-        </div>
-      </a>
+      </div>
     </div>
-  </div>
-  <!-- End Sidebar -->
+    <!-- End Sidebar -->
 
-  <!-- Start Content -->
-  <div class="home_content">
-    <!-- Start Navbar -->
-    <nav class="navbar rounded-start-4">
-      <div class="navbar-brand fs-3 fw-bold gap-3 ps-3 text-white">
-        <img src="../assets/logoSekolah.png" alt="" width="50px" />
-        <a href="#" class="text-white text-decoration-none">SD Pelita Hati</a>
-      </div>
-      <div class="nav-navbar d-flex align-self-stretch align-items-center gap-5 me-4 fw-bold text-white">
-        <div class="notif d-flex flex-row mx-3">
-          <a href="#" class="text-white"><i class="bi bi-whatsapp"></i></a>
-          <a href="#" class="text-white"><i class="bi bi-bell-fill"></i></a>
+    <!-- Start Content -->
+    <div class="home_content">
+      <!-- Start Navbar -->
+      <nav class="navbar rounded-start-4">
+        <div class="navbar-brand fs-3 fw-bold gap-3 ps-3 text-white">
+          <img src="../assets/logoSekolah.png" alt="" width="50px" />
+          <a href="#" class="text-white text-decoration-none">SD Pelita Hati</a>
         </div>
-        <div class="jam d-flex flex-row gap-3">
-          <i class="bi" id="logoJam"></i>
-          <div class="d-inline-block" id="jam"></div>
+        <div
+          class="nav-navbar d-flex align-self-stretch align-items-center gap-5 me-4 fw-bold text-white"
+        >
+          <div class="notif d-flex flex-row mx-3">
+            <a href="#" class="text-white"><i class="bi bi-whatsapp"></i></a>
+            <a href="#" class="text-white"><i class="bi bi-bell-fill"></i></a>
+          </div>
+          <div class="jam d-flex flex-row gap-3">
+            <i class="bi" id="logoJam"></i>
+            <div class="d-inline-block" id="jam"></div>
+          </div>
         </div>
-      </div>
-    </nav>
-    <!-- End Navbar -->
+      </nav>
+      <!-- End Navbar -->
 
-    <!-- Start Semua Tagihan -->
-    <div class="main-content">
-      <div class="header h-auto">
-        <span class="d-block w-100 fs-2 pb-3 fw-bold">Semua Tagihan</span>
-      </div>
-      <div class="sem-tag">
-        <div class="cari fw-bolder">
-          <i class="bi bi-search"></i>
-          <span class="">Search :</span>
+      <!-- Start Semua Tagihan -->
+      <div class="main-content">
+        <div class="header h-auto">
+          <span class="d-block w-100 fs-2 pb-3 fw-bold">Semua Tagihan</span>
         </div>
-        <div class="form-tamtag mb-3">
-          <div class="input-box">
-            <span>NIS</span>
-            <input type="text" placeholder="xxxxxxxxx" />
+        <div class="sem-tag">
+          <div class="cari fw-bolder">
+            <i class="bi bi-search"></i>
+            <span class="">Search :</span>
           </div>
-          <div class="input-box">
-            <span>Nama Siswa</span>
-            <input type="text" placeholder="xxxxxxxxx" />
-          </div>
-          <div class="input-box">
-            <span>Tahun Angkatan</span>
-            <input type="date" placeholder="xxxxxxxxx" />
-          </div>
-        </div>
-        <div class="con-tambah">
-          <button id="tagOpen" class="btn btn-tam-tag btn-success">
-            <i class="bi bi-plus"></i>
-          </button>
-        </div>
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">NIS</th>
-              <th scope="col">Nama Siswa/i</th>
-              <th scope="col">Keterangan</th>
-              <th scope="col">Tunggakan</th>
-              <th scope="col">Jatuh Tempo</th>
-              <th scope="col">Aksi</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="bg-danger">
-              <th scope="row">1</th>
-              <td>61234567891</td>
-              <td>Asep</td>
-              <td>SPP Januari</td>
-              <td>Rp. 190.000</td>
-              <td>15/10/2024</td>
-              <td class="">
-                <button type="button" class="btn btn-warning text-white me-2" style="width: 80px">
-                  Edit
-                </button>
-                <button type="button" class="btn btn-danger text-white mx-2" style="width: 80px">
-                  Hapus
-                </button>
-              </td>
-            </tr>
-            <tr class="bg-danger">
-              <th scope="row">2</th>
-              <td>61234567891</td>
-              <td>Asep</td>
-              <td>SPP Januari</td>
-              <td>Rp. 190.000</td>
-              <td>15/10/2024</td>
-              <td class="">
-                <button type="button" class="btn btn-warning text-white me-2" style="width: 80px">
-                  Edit
-                </button>
-                <button type="button" class="btn btn-danger text-white mx-2" style="width: 80px">
-                  Hapus
-                </button>
-              </td>
-            </tr>
-            <tr class="bg-danger">
-              <th scope="row">3</th>
-              <td>61234567891</td>
-              <td>Asep</td>
-              <td>SPP Januari</td>
-              <td>Rp. 190.000</td>
-              <td>15/10/2024</td>
-              <td class="">
-                <button type="button" class="btn btn-warning text-white me-2" style="width: 80px">
-                  Edit
-                </button>
-                <button type="button" class="btn btn-danger text-white mx-2" style="width: 80px">
-                  Hapus
-                </button>
-              </td>
-            </tr>
-            <tr class="bg-danger">
-              <th scope="row">3</th>
-              <td>61234567891</td>
-              <td>Asep</td>
-              <td>SPP Januari</td>
-              <td>Rp. 190.000</td>
-              <td>15/10/2024</td>
-              <td class="">
-                <button type="button" class="btn btn-warning text-white me-2" style="width: 80px">
-                  Edit
-                </button>
-                <button type="button" class="btn btn-danger text-white mx-2" style="width: 80px">
-                  Hapus
-                </button>
-              </td>
-            </tr>
-            <tr class="bg-danger">
-              <th scope="row">3</th>
-              <td>61234567891</td>
-              <td>Asep</td>
-              <td>SPP Januari</td>
-              <td>Rp. 190.000</td>
-              <td>15/10/2024</td>
-              <td class="">
-                <button type="button" class="btn btn-warning text-white me-2" style="width: 80px">
-                  Edit
-                </button>
-                <button type="button" class="btn btn-danger text-white mx-2" style="width: 80px">
-                  Hapus
-                </button>
-              </td>
-            </tr>
-            <tr class="bg-danger">
-              <th scope="row">3</th>
-              <td>61234567891</td>
-              <td>Asep</td>
-              <td>SPP Januari</td>
-              <td>Rp. 190.000</td>
-              <td>15/10/2024</td>
-              <td class="">
-                <button type="button" class="btn btn-warning text-white me-2" style="width: 80px">
-                  Edit
-                </button>
-                <button type="button" class="btn btn-danger text-white mx-2" style="width: 80px">
-                  Hapus
-                </button>
-              </td>
-            </tr>
-            <tr class="bg-danger">
-              <th scope="row">3</th>
-              <td>61234567891</td>
-              <td>Asep</td>
-              <td>SPP Januari</td>
-              <td>Rp. 190.000</td>
-              <td>15/10/2024</td>
-              <td class="">
-                <button type="button" class="btn btn-warning text-white me-2" style="width: 80px">
-                  Edit
-                </button>
-                <button type="button" class="btn btn-danger text-white mx-2" style="width: 80px">
-                  Hapus
-                </button>
-              </td>
-            </tr>
-            <tr class="bg-danger">
-              <th scope="row">3</th>
-              <td>61234567891</td>
-              <td>Asep</td>
-              <td>SPP Januari</td>
-              <td>Rp. 190.000</td>
-              <td>15/10/2024</td>
-              <td class="">
-                <button type="button" class="btn btn-warning text-white me-2" style="width: 80px">
-                  Edit
-                </button>
-                <button type="button" class="btn btn-danger text-white mx-2" style="width: 80px">
-                  Hapus
-                </button>
-              </td>
-            </tr>
-            <tr class="bg-danger">
-              <th scope="row">3</th>
-              <td>61234567891</td>
-              <td>Asep</td>
-              <td>SPP Januari</td>
-              <td>Rp. 190.000</td>
-              <td>15/10/2024</td>
-              <td class="">
-                <button type="button" class="btn btn-warning text-white me-2" style="width: 80px">
-                  Edit
-                </button>
-                <button type="button" class="btn btn-danger text-white mx-2" style="width: 80px">
-                  Hapus
-                </button>
-              </td>
-            </tr>
-            <tr class="bg-danger">
-              <th scope="row">3</th>
-              <td>61234567891</td>
-              <td>Asep</td>
-              <td>SPP Januari</td>
-              <td>Rp. 190.000</td>
-              <td>15/10/2024</td>
-              <td class="">
-                <button type="button" class="btn btn-warning text-white me-2" style="width: 80px">
-                  Edit
-                </button>
-                <button type="button" class="btn btn-danger text-white mx-2" style="width: 80px">
-                  Hapus
-                </button>
-              </td>
-            </tr>
-            <tr class="bg-danger">
-              <th scope="row">3</th>
-              <td>61234567891</td>
-              <td>Asep</td>
-              <td>SPP Januari</td>
-              <td>Rp. 190.000</td>
-              <td>15/10/2024</td>
-              <td class="">
-                <button type="button" class="btn btn-warning text-white me-2" style="width: 80px">
-                  Edit
-                </button>
-                <button type="button" class="btn btn-danger text-white mx-2" style="width: 80px">
-                  Hapus
-                </button>
-              </td>
-            </tr>
-            <tr class="bg-danger">
-              <th scope="row">3</th>
-              <td>61234567891</td>
-              <td>Asep</td>
-              <td>SPP Januari</td>
-              <td>Rp. 190.000</td>
-              <td>15/10/2024</td>
-              <td class="">
-                <button type="button" class="btn btn-warning text-white me-2" style="width: 80px">
-                  Edit
-                </button>
-                <button type="button" class="btn btn-danger text-white mx-2" style="width: 80px">
-                  Hapus
-                </button>
-              </td>
-            </tr>
-            <tr class="bg-danger">
-              <th scope="row">3</th>
-              <td>61234567891</td>
-              <td>Asep</td>
-              <td>SPP Januari</td>
-              <td>Rp. 190.000</td>
-              <td>15/10/2024</td>
-              <td class="">
-                <button type="button" class="btn btn-warning text-white me-2" style="width: 80px">
-                  Edit
-                </button>
-                <button type="button" class="btn btn-danger text-white mx-2" style="width: 80px">
-                  Hapus
-                </button>
-              </td>
-            </tr>
-            <tr class="bg-danger">
-              <th scope="row">3</th>
-              <td>61234567891</td>
-              <td>Asep</td>
-              <td>SPP Januari</td>
-              <td>Rp. 190.000</td>
-              <td>15/10/2024</td>
-              <td class="">
-                <button type="button" class="btn btn-warning text-white me-2" style="width: 80px">
-                  Edit
-                </button>
-                <button type="button" class="btn btn-danger text-white mx-2" style="width: 80px">
-                  Hapus
-                </button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <!-- panel-tambah-tagihan -->
-        <div id="tagBg" class="bg-tam-tag">
-        </div>
-        <div id="tagPn" class="pn-tam-tag">
-          <div class="close-pn-tag d-flex justify-content-end">
-            <button id="tagClose" class="btn"><i class="bi bi-x-lg"></i></button>
-          </div>
-          <div class="header-pn-tag">
-            <span>Tambah Tagihan</span>
-            <div class="dropdown-center">
-              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Per-Murid
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item text-center" href="#">Per-Murid</a></li>
-                <li><a class="dropdown-item text-center" href="#">Per-Kelas</a></li>
-                <li><a class="dropdown-item text-center" href="#">Per-Angkatan</a></li>
-              </ul>
+          <div class="form-tamtag mb-3">
+            <div class="input-box">
+              <span>NIS</span>
+              <input type="text" placeholder="xxxxxxxxx" />
             </div>
-          </div>
-          <div class="main-pn-tag">
-            <div class="input-text">
-              <span>Nomor Induk Siswa</span>
-              <input type="text" placeholder="61xxxxxxxxxxx" />
-            </div>
-            <div class="input-text">
+            <div class="input-box">
               <span>Nama Siswa</span>
-              <input type="text" placeholder="Jamilah" />
+              <input type="text" placeholder="xxxxxxxxx" />
             </div>
-            <div class="input-text">
-              <span>Kelas</span>
-              <input type="text" placeholder="1-A" />
+            <div class="input-box">
+              <span>Tahun Angkatan</span>
+              <input type="date" placeholder="xxxxxxxxx" />
             </div>
-            <div class="input-text">
-              <span>Keterangan Tagihan</span>
-              <input type="text" placeholder="Pembayaran SPP" />
+          </div>
+          <div class="con-tambah">
+            <button id="tagOpen" class="btn btn-tam-tag btn-success">
+              <i class="bi bi-plus"></i>
+            </button>
+          </div>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">NIS</th>
+                <th scope="col">Nama Siswa/i</th>
+                <th scope="col">Keterangan</th>
+                <th scope="col">Tunggakan</th>
+                <th scope="col">Jatuh Tempo</th>
+                <th scope="col">Aksi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bg-danger">
+                <th scope="row">1</th>
+                <td>61234567891</td>
+                <td>Asep</td>
+                <td>SPP Januari</td>
+                <td>Rp. 190.000</td>
+                <td>15/10/2024</td>
+                <td class="">
+                  <button
+                    type="button"
+                    class="btn btn-warning text-white me-2"
+                    style="width: 80px"
+                  >
+                    Edit
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-danger text-white mx-2"
+                    style="width: 80px"
+                  >
+                    Hapus
+                  </button>
+                </td>
+              </tr>
+              <tr class="bg-danger">
+                <th scope="row">2</th>
+                <td>61234567891</td>
+                <td>Asep</td>
+                <td>SPP Januari</td>
+                <td>Rp. 190.000</td>
+                <td>15/10/2024</td>
+                <td class="">
+                  <button
+                    type="button"
+                    class="btn btn-warning text-white me-2"
+                    style="width: 80px"
+                  >
+                    Edit
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-danger text-white mx-2"
+                    style="width: 80px"
+                  >
+                    Hapus
+                  </button>
+                </td>
+              </tr>
+              <tr class="bg-danger">
+                <th scope="row">3</th>
+                <td>61234567891</td>
+                <td>Asep</td>
+                <td>SPP Januari</td>
+                <td>Rp. 190.000</td>
+                <td>15/10/2024</td>
+                <td class="">
+                  <button
+                    type="button"
+                    class="btn btn-warning text-white me-2"
+                    style="width: 80px"
+                  >
+                    Edit
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-danger text-white mx-2"
+                    style="width: 80px"
+                  >
+                    Hapus
+                  </button>
+                </td>
+              </tr>
+              <tr class="bg-danger">
+                <th scope="row">3</th>
+                <td>61234567891</td>
+                <td>Asep</td>
+                <td>SPP Januari</td>
+                <td>Rp. 190.000</td>
+                <td>15/10/2024</td>
+                <td class="">
+                  <button
+                    type="button"
+                    class="btn btn-warning text-white me-2"
+                    style="width: 80px"
+                  >
+                    Edit
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-danger text-white mx-2"
+                    style="width: 80px"
+                  >
+                    Hapus
+                  </button>
+                </td>
+              </tr>
+              <tr class="bg-danger">
+                <th scope="row">3</th>
+                <td>61234567891</td>
+                <td>Asep</td>
+                <td>SPP Januari</td>
+                <td>Rp. 190.000</td>
+                <td>15/10/2024</td>
+                <td class="">
+                  <button
+                    type="button"
+                    class="btn btn-warning text-white me-2"
+                    style="width: 80px"
+                  >
+                    Edit
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-danger text-white mx-2"
+                    style="width: 80px"
+                  >
+                    Hapus
+                  </button>
+                </td>
+              </tr>
+              <tr class="bg-danger">
+                <th scope="row">3</th>
+                <td>61234567891</td>
+                <td>Asep</td>
+                <td>SPP Januari</td>
+                <td>Rp. 190.000</td>
+                <td>15/10/2024</td>
+                <td class="">
+                  <button
+                    type="button"
+                    class="btn btn-warning text-white me-2"
+                    style="width: 80px"
+                  >
+                    Edit
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-danger text-white mx-2"
+                    style="width: 80px"
+                  >
+                    Hapus
+                  </button>
+                </td>
+              </tr>
+              <tr class="bg-danger">
+                <th scope="row">3</th>
+                <td>61234567891</td>
+                <td>Asep</td>
+                <td>SPP Januari</td>
+                <td>Rp. 190.000</td>
+                <td>15/10/2024</td>
+                <td class="">
+                  <button
+                    type="button"
+                    class="btn btn-warning text-white me-2"
+                    style="width: 80px"
+                  >
+                    Edit
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-danger text-white mx-2"
+                    style="width: 80px"
+                  >
+                    Hapus
+                  </button>
+                </td>
+              </tr>
+              <tr class="bg-danger">
+                <th scope="row">3</th>
+                <td>61234567891</td>
+                <td>Asep</td>
+                <td>SPP Januari</td>
+                <td>Rp. 190.000</td>
+                <td>15/10/2024</td>
+                <td class="">
+                  <button
+                    type="button"
+                    class="btn btn-warning text-white me-2"
+                    style="width: 80px"
+                  >
+                    Edit
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-danger text-white mx-2"
+                    style="width: 80px"
+                  >
+                    Hapus
+                  </button>
+                </td>
+              </tr>
+              <tr class="bg-danger">
+                <th scope="row">3</th>
+                <td>61234567891</td>
+                <td>Asep</td>
+                <td>SPP Januari</td>
+                <td>Rp. 190.000</td>
+                <td>15/10/2024</td>
+                <td class="">
+                  <button
+                    type="button"
+                    class="btn btn-warning text-white me-2"
+                    style="width: 80px"
+                  >
+                    Edit
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-danger text-white mx-2"
+                    style="width: 80px"
+                  >
+                    Hapus
+                  </button>
+                </td>
+              </tr>
+              <tr class="bg-danger">
+                <th scope="row">3</th>
+                <td>61234567891</td>
+                <td>Asep</td>
+                <td>SPP Januari</td>
+                <td>Rp. 190.000</td>
+                <td>15/10/2024</td>
+                <td class="">
+                  <button
+                    type="button"
+                    class="btn btn-warning text-white me-2"
+                    style="width: 80px"
+                  >
+                    Edit
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-danger text-white mx-2"
+                    style="width: 80px"
+                  >
+                    Hapus
+                  </button>
+                </td>
+              </tr>
+              <tr class="bg-danger">
+                <th scope="row">3</th>
+                <td>61234567891</td>
+                <td>Asep</td>
+                <td>SPP Januari</td>
+                <td>Rp. 190.000</td>
+                <td>15/10/2024</td>
+                <td class="">
+                  <button
+                    type="button"
+                    class="btn btn-warning text-white me-2"
+                    style="width: 80px"
+                  >
+                    Edit
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-danger text-white mx-2"
+                    style="width: 80px"
+                  >
+                    Hapus
+                  </button>
+                </td>
+              </tr>
+              <tr class="bg-danger">
+                <th scope="row">3</th>
+                <td>61234567891</td>
+                <td>Asep</td>
+                <td>SPP Januari</td>
+                <td>Rp. 190.000</td>
+                <td>15/10/2024</td>
+                <td class="">
+                  <button
+                    type="button"
+                    class="btn btn-warning text-white me-2"
+                    style="width: 80px"
+                  >
+                    Edit
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-danger text-white mx-2"
+                    style="width: 80px"
+                  >
+                    Hapus
+                  </button>
+                </td>
+              </tr>
+              <tr class="bg-danger">
+                <th scope="row">3</th>
+                <td>61234567891</td>
+                <td>Asep</td>
+                <td>SPP Januari</td>
+                <td>Rp. 190.000</td>
+                <td>15/10/2024</td>
+                <td class="">
+                  <button
+                    type="button"
+                    class="btn btn-warning text-white me-2"
+                    style="width: 80px"
+                  >
+                    Edit
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-danger text-white mx-2"
+                    style="width: 80px"
+                  >
+                    Hapus
+                  </button>
+                </td>
+              </tr>
+              <tr class="bg-danger">
+                <th scope="row">3</th>
+                <td>61234567891</td>
+                <td>Asep</td>
+                <td>SPP Januari</td>
+                <td>Rp. 190.000</td>
+                <td>15/10/2024</td>
+                <td class="">
+                  <button
+                    type="button"
+                    class="btn btn-warning text-white me-2"
+                    style="width: 80px"
+                  >
+                    Edit
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-danger text-white mx-2"
+                    style="width: 80px"
+                  >
+                    Hapus
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div id="tagBg" class="bg-tam-tag"></div>
+          <div id="tagPn" class="pn-tam-tag">
+            <div class="close-pn-tag d-flex justify-content-end">
+              <button id="tagClose" class="btn">
+                <i class="bi bi-x-lg"></i>
+              </button>
             </div>
-            <div class="input-text">
-              <span>Nominal Tagihan</span>
-              <input type="number" placeholder="Rp. xxx.xxx" />
+            <div class="header-pn-tag">
+              <span>Tambah Tagihan</span>
+              <div class="dropdown-center">
+                <button
+                  class="btn btn-secondary dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  id="pn-item-select"
+                >
+                  Per-Murid
+                </button>
+                <ul class="dropdown-menu">
+                  <li id="tam-tag-murid">
+                    <a class="dropdown-item text-center" href="#">Per-Murid</a>
+                  </li> 
+                  <li id="tam-tag-kelas">
+                    <a class="dropdown-item text-center" href="#">Per-Kelas</a>
+                  </li>
+                  <li id="tam-tag-ta">
+                    <a class="dropdown-item text-center" href="#"
+                      >Per-Tahun Ajar</a
+                    >
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div class="btn-input-tag d-flex justify-content-end gap-4 mt-3 mb-2">
-              <button class="btn btn-success">Tambah</button>
-              <button class="btn btn-danger">Hapus</button>
+            <div class="main-pn-tag">
+              <div id="siswa">
+                <div class="input-text">
+                  <span>Nomor Induk Siswa</span>
+                  <input type="text" placeholder="61xxxxxxxxxxx" />
+                </div>
+                <div class="input-text">
+                  <span>Nama Siswa</span>
+                  <input type="text" placeholder="Jamilah" />
+                </div>
+                <div class="input-text">
+                  <span>Kelas</span>
+                  <input type="text" placeholder="1-A" />
+                </div>
+                <div class="input-text">
+                  <span>Keterangan Tagihan</span>
+                  <input type="text" placeholder="Pembayaran SPP" />
+                </div>
+                <div class="input-text">
+                  <span>Nominal Tagihan</span>
+                  <input type="number" placeholder="Rp. xxx.xxx" />
+                </div>
+              </div>
+              <div id="kelas" class="d-none">
+                <div class="input-text">
+                  <span>Kelas</span>
+                  <input type="text" placeholder="61xxxxxxxxxxx" />
+                </div>
+                <div class="input-text">
+                  <span>Keterangan Tagihan</span>
+                  <input type="text" placeholder="Pembayaran SPP" />
+                </div>
+                <div class="input-text">
+                  <span>Nominal Tagihan</span>
+                  <input type="number" placeholder="Rp. xxx.xxx" />
+                </div>
+              </div>
+              <div id="tahun-ajar" class="d-none">
+                <div class="input-text">
+                  <span>Tahun Ajar</span>
+                  <input type="text" placeholder="61xxxxxxxxxxx" />
+                </div>
+                <div class="input-text">
+                  <span>Keterangan Tagihan</span>
+                  <input type="text" placeholder="Pembayaran SPP" />
+                </div>
+                <div class="input-text">
+                  <span>Nominal Tagihan</span>
+                  <input type="number" placeholder="Rp. xxx.xxx" />
+                </div>
+              </div>
+              <div
+                class="btn-input-tag d-flex justify-content-end gap-4 mt-3 mb-2"
+              >
+                <button class="btn btn-success">Tambah</button>
+                <button class="btn btn-danger">Hapus</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <!-- End Semua Tagihan -->
     </div>
-    <!-- End Semua Tagihan -->
-  </div>
-  <!-- End Content -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
-  <script src="../bootstrap/js/bootstrap.js"></script>
-  <script src="../js/script.js"></script>
-  <script src="../js/sem_tag.js"></script>
-</body>
-
+    <!-- End Content -->
+    <script src="../bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/sem_tag.js"></script>
+  </body>
 </html>

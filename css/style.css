@@ -10,7 +10,8 @@ body {
   width: 100%;
   overflow: visible;
   background-color: #eeeeee;
-  z-index: -2; /* z-index -1 adalah home-content */
+  z-index: -2;
+  /* z-index -1 adalah home-content */
 }
 
 .sidebar {
@@ -478,7 +479,7 @@ body {
   position: fixed;
   display: none;
   top: 0;
-  left: 78px;
+  left: 0;
   right: 0;
   bottom: 0;
   height: 100vh;
@@ -498,11 +499,30 @@ body {
   left: 78px;
   right: 0;
   bottom: 0;
+  /* height: 70vh; */
+  /* margin: 20vh 250px ; */
   margin: 30px 250px;
   border-radius: 24px;
   background-color: #11101d;
   padding: 20px 15px;
   color: white;
+}
+
+.pn-tam-tag.active {
+  animation: pn-masuk 0.5s ease;
+}
+
+@keyframes pn-masuk {
+  0% {
+    top: -100px;
+    bottom: 100px;
+    opacity: 0.2;
+  }
+  100% {
+    top: 0;
+    bottom: 0;
+    opacity: 1;
+  }
 }
 
 .pn-tam-tag .close-pn-tag button {
@@ -590,6 +610,27 @@ body {
 .master-data {
   display: flex;
   flex-direction: column;
+  background-color: #007bff;
+  /* padding-bottom: 1000px; */
+}
+
+.master-data .md-tam-siswa {
+  display: flex;
+  flex-direction: column;
+}
+
+.master-data .md-tam-siswa .md-header {
+  align-self: center;
+}
+
+.master-data .md-tam-siswa .md-input-box {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+.master-data .md-tam-siswa .md-input-box span {
+  align-self: self-end;
 }
 
 /* Media Query */

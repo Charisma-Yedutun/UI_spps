@@ -54,6 +54,12 @@
 //   // Membersihkan Input Keterangan
 //   document.getElementById("keterangan").value = "";
 // };
+// Cek Tinggi Lebar
+
+let myWidth = window.innerWidth;
+let myHeight = window.innerHeight;
+console.log("W :" + myWidth);
+console.log("H :" + myHeight);
 
 // Panel Tambah Tagihan
 let bgTag = document.getElementById("tagBg");
@@ -65,16 +71,62 @@ closeTag.onclick = function () {
   pnTag.style.display = "none";
   bgTag.style.display = "none";
   document.body.style.overflow = "auto";
+  // Animasi pn masuk
+  pnTag.classList.toggle("active");
 };
 
 bgTag.onclick = function () {
   pnTag.style.display = "none";
   bgTag.style.display = "none";
   document.body.style.overflow = "auto";
+  // Animasi pn masuk
+  pnTag.classList.toggle("active");
 };
 
 openTag.onclick = function () {
   pnTag.style.display = "block";
   bgTag.style.display = "block";
   document.body.style.overflow = "hidden";
+  // Animasi pn masuk
+  pnTag.classList.toggle("active");
+};
+
+// Select item tam-tag
+let tamTagMurid = document.getElementById("tam-tag-murid");
+let tamTagKelas = document.getElementById("tam-tag-kelas");
+let tamTagTa = document.getElementById("tam-tag-ta");
+let pnSelectedItem = document.getElementById("pn-item-select");
+
+let displaySiswa = document.getElementById("siswa");
+let displayKelas = document.getElementById("kelas");
+let displayTa = document.getElementById("tahun-ajar");
+
+tamTagMurid.onclick = function () {
+  if (displaySiswa.classList.contains("d-none")) {
+    displaySiswa.classList.remove("d-none");
+    pnSelectedItem.innerText = "Per-Murid";
+  }
+  displayKelas.classList.add("d-none");
+  displayTa.classList.add("d-none");
+  pnSelectedItem.innerText = "Per-Murid";
+};
+
+tamTagKelas.onclick = function () {
+  if (displayKelas.classList.contains("d-none")) {
+    displayKelas.classList.remove("d-none");
+    pnSelectedItem.innerText = "Per-Kelas";
+  }
+  displaySiswa.classList.add("d-none");
+  displayTa.classList.add("d-none");
+  pnSelectedItem.innerText = "Per-Kelas";
+};
+
+tamTagTa.onclick = function () {
+  if (displayTa.classList.contains("d-none")) {
+    displayTa.classList.remove("d-none");
+    pnSelectedItem.innerText = "Per-Tahun Ajar";
+  }
+  displaySiswa.classList.add("d-none");
+  displayKelas.classList.add("d-none");
+  pnSelectedItem.innerText = "Per-Tahun Ajar";
 };
