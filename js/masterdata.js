@@ -5,38 +5,81 @@ let adminSelect = document.getElementById("master-admin");
 let muridContent = document.getElementById("md-murid");
 let yayasanContent = document.getElementById("md-yayasan");
 let adminContent = document.getElementById("md-admin");
+
+let muridTable = document.getElementById("tabel-murid");
+let yayasanTable = document.getElementById("tabel-yayasan");
+let adminTable = document.getElementById("tabel-admin");
+
+let btnAddUser = document.getElementById("open-form-user");
+let formActive = "murid";
+
 muridSelect.onclick = function () {
+  formActive = "murid";
   if (!muridSelect.classList.contains("active")) {
     // tab
     muridSelect.classList.add("active");
     yayasanSelect.classList.remove("active");
     adminSelect.classList.remove("active");
-    // content
-    muridContent.classList.remove("d-none");
-    yayasanContent.classList.add("d-none");
-    adminContent.classList.add("d-none");
+    // table
+    muridTable.classList.remove("d-none");
+    yayasanTable.classList.add("d-none");
+    adminTable.classList.add("d-none");
+    // btn-tambah-user
+    btnAddUser.innerText = "Tambah Murid";
+    // reset-form
+    formMurid.classList.add("d-none");
+    formYayasan.classList.add("d-none");
+    formAdmin.classList.add("d-none");
   }
 };
 yayasanSelect.onclick = function () {
+  formActive = "yayasan";
   if (!yayasanSelect.classList.contains("active")) {
     muridSelect.classList.remove("active");
     yayasanSelect.classList.add("active");
     adminSelect.classList.remove("active");
-    // content
-    muridContent.classList.add("d-none");
-    yayasanContent.classList.remove("d-none");
-    adminContent.classList.add("d-none");
+    // table
+    muridTable.classList.add("d-none");
+    yayasanTable.classList.remove("d-none");
+    adminTable.classList.add("d-none");
+    // btn-tambah-user
+    btnAddUser.innerText = "Tambah Yayasan";
+    // reset-form
+    formMurid.classList.add("d-none");
+    formYayasan.classList.add("d-none");
+    formAdmin.classList.add("d-none");
   }
 };
 adminSelect.onclick = function () {
+  formActive = "admin";
   if (!adminSelect.classList.contains("active")) {
     muridSelect.classList.remove("active");
     yayasanSelect.classList.remove("active");
     adminSelect.classList.add("active");
-    // content
-    muridContent.classList.add("d-none");
-    yayasanContent.classList.add("d-none");
-    adminContent.classList.remove("d-none");
+    // table
+    muridTable.classList.add("d-none");
+    yayasanTable.classList.add("d-none");
+    adminTable.classList.remove("d-none");
+    // btn-tambah-user
+    btnAddUser.innerText = "Tambah Admin";
+    // reset-form
+    formMurid.classList.add("d-none");
+    formYayasan.classList.add("d-none");
+    formAdmin.classList.add("d-none");
+  }
+};
+
+// btn-tambah-user.onclick
+let formMurid = document.getElementById("md-murid");
+let formYayasan = document.getElementById("md-yayasan");
+let formAdmin = document.getElementById("md-admin");
+btnAddUser.onclick = function () {
+  if (formActive == "murid") {
+    formMurid.classList.toggle("d-none");
+  } else if (formActive == "yayasan") {
+    formYayasan.classList.toggle("d-none");
+  } else if (formActive == "admin") {
+    formAdmin.classList.toggle("d-none");
   }
 };
 

@@ -4,6 +4,15 @@
   box-sizing: border-box;
 }
 
+html::-webkit-scrollbar {
+  width: 10px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: rgba(103, 107, 110, 0.3);
+  border-radius: 8px;
+}
+
 body {
   position: relative;
   min-height: 100vh;
@@ -642,11 +651,15 @@ body {
   background-color: #ffc107;
 }
 
+/* murid */
 .md-content .md-murid {
   display: flex;
+  flex-direction: column;
+}
+
+.md-content .md-murid .md-form-murid {
+  display: flex;
   gap: 38px;
-  /* align-items: center; */
-  /* background-color: #198754; */
 }
 
 .md-content .md-murid .left-side-murid {
@@ -661,7 +674,6 @@ body {
   /* background-color: rebeccapurple; */
 }
 
-
 .md-content .md-murid .right-side-murid {
   width: 50%;
 }
@@ -674,7 +686,7 @@ body {
   /* background-color: rebeccapurple; */
 }
 
-.md-input-style{
+.md-input-style {
   border: 1px solid black;
   border-radius: 5px;
   padding: 3px 7px;
@@ -720,13 +732,45 @@ body {
   cursor: pointer;
 }
 
-.master-data .md-content .md-con-btn {
+/* input-box admin + yayasan */
+.input-box-adyy {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+/* yayasan */
+.md-content .md-yayasan {
+  display: flex;
+  flex-direction: column;
+}
+
+.md-content .md-yayasan .md-form-yayasan {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+/* admin */
+.md-content .md-admin {
+  display: flex;
+  flex-direction: column;
+}
+
+.md-content .md-admin .md-form-admin {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+/* button admin + yayasan */
+.md-con-btn {
   display: flex;
   justify-content: space-around;
   width: 100%;
 }
 
-.md-content .md-con-btn button {
+.md-con-btn button {
   border: 1px solid;
   font-weight: 600;
   width: 30%;
@@ -751,6 +795,11 @@ body {
   background-color: #dc3545;
   border-color: #fff;
 }
+
+/* tabel murid */
+/* .master-data .md-content .md-tabel {
+} */
+
 /* Media Query */
 
 @media screen and (max-width: 1024px) {
