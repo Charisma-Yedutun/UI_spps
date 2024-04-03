@@ -7,11 +7,11 @@ toggleBtn.onclick = function () {
   sidebar.classList.toggle("active");
   if (sidebar.classList.contains("active")) {
   } else {
-    tag_icon.style.transform = "rotate(0deg)";
-    tag_toggle.classList.remove("tag-active");
-    tag_toggle.classList.add("tag-non-active");
-    tag_toggle.classList.add("dropdown-con");
-    tag_toggle.classList.remove("update");
+    // tag_icon.style.transform = "rotate(0deg)";
+    // tag_toggle.classList.remove("tag-active");
+    // tag_toggle.classList.add("tag-non-active");
+    // tag_toggle.classList.add("dropdown-con");
+    // tag_toggle.classList.remove("update");
   }
 };
 
@@ -78,5 +78,3 @@ function tampilkanJam() {
 }
 setInterval(tampilkanJam, 1000); // Refresh setiap 1 detik
 // Tampilkan Waktu (Akhir)
-
-

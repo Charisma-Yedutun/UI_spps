@@ -610,29 +610,147 @@ body {
 .master-data {
   display: flex;
   flex-direction: column;
-  background-color: #007bff;
-  /* padding-bottom: 1000px; */
+  padding-bottom: 20px;
 }
 
-.master-data .md-tam-siswa {
+.master-data .md-tabs .nav-item a:hover {
+  background-color: white;
+  color: black;
+}
+
+.master-data .md-tabs .nav-link.active {
+  position: relative !important;
+  font-weight: bold;
+  z-index: -1 !important;
+}
+
+.master-data .md-content {
+  width: 100%;
+  background-color: white;
+  padding: 16px 10px;
+}
+
+.md-content .md-content-warning {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  color: rgb(167, 127, 8);
+  padding: 1px 10px;
+  border: 2px solid rgb(167, 127, 8);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background-color: #ffc107;
+}
+
+.md-content .md-murid {
+  display: flex;
+  gap: 38px;
+  /* align-items: center; */
+  /* background-color: #198754; */
+}
+
+.md-content .md-murid .left-side-murid {
+  width: 50%;
+}
+
+.md-murid .left-side-murid .input-box-left {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  margin-bottom: 5px;
+  /* background-color: rebeccapurple; */
 }
 
-.master-data .md-tam-siswa .md-header {
+
+.md-content .md-murid .right-side-murid {
+  width: 50%;
+}
+
+.md-murid .right-side-murid .input-box-right {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 5px;
+  /* background-color: rebeccapurple; */
+}
+
+.md-input-style{
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 3px 7px;
+}
+
+.right-side-murid .input-box-right input[type="file"] {
+  display: none;
+}
+
+.right-side-murid .input-box-right .lblFoto {
+  display: flex;
+  flex-direction: column;
   align-self: center;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed blue;
+  border-radius: 8px;
+  padding: 5px;
+  width: 50%;
+  height: 135px;
 }
 
-.master-data .md-tam-siswa .md-input-box {
+.right-side-murid .input-box-right .lblFoto:hover {
+  cursor: pointer;
+}
+
+/* dd-kelas-murid */
+.input-box-left .dropdown .dd-kelas {
+  border: 1px solid #11101d;
+}
+
+/* JK-MUrid hover */
+.right-side-murid .input-box-right .con-laki label:hover {
+  cursor: pointer;
+}
+.right-side-murid .input-box-right .con-laki input:hover {
+  cursor: pointer;
+}
+.right-side-murid .input-box-right .con-perem label:hover {
+  cursor: pointer;
+}
+.right-side-murid .input-box-right .con-perem input:hover {
+  cursor: pointer;
+}
+
+.master-data .md-content .md-con-btn {
   display: flex;
-  flex-direction: column;
-  padding: 20px 0;
+  justify-content: space-around;
+  width: 100%;
 }
 
-.master-data .md-tam-siswa .md-input-box span {
-  align-self: self-end;
+.md-content .md-con-btn button {
+  border: 1px solid;
+  font-weight: 600;
+  width: 30%;
 }
 
+.md-content .md-con-btn .md-tambah {
+  border-color: #28a745;
+}
+
+.md-content .md-con-btn .md-bersih {
+  border-color: #dc3545;
+}
+
+.md-content .md-con-btn .md-tambah:hover {
+  color: #fff;
+  background-color: #28a745;
+  border-color: #fff;
+}
+
+.md-content .md-con-btn .md-bersih:hover {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #fff;
+}
 /* Media Query */
 
 @media screen and (max-width: 1024px) {

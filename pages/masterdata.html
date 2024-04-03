@@ -140,163 +140,220 @@
         <div class="header h-auto">
           <span class="d-block w-100 fs-2 pb-3 fw-bold">Master Data</span>
         </div>
-        <span class="mt-3">Tambah Akun dengan Role : </span>
-        <ul class="nav nav-tabs justify-content-around">
-          <li class="nav-item w-25">
-            <a
-              id="master-murid"
-              class="nav-link text-center active"
-              aria-current="page"
-              href="#"
-              >Murid</a
-            >
-          </li>
-          <li class="nav-item w-25">
-            <a id="master-yayasan" class="nav-link text-center" href="#"
-              >Yayasan</a
-            >
-          </li>
-          <li class="nav-item w-25">
-            <a id="master-admin" class="nav-link text-center" href="#">Admin</a>
-          </li>
-        </ul>
-        <!-- <div class="master-data">
-          <div class="md-tam-siswa">
-            <span class="md-header">Tambah Akun Siswa</span>
-            <div class="input-group flex-nowrap mb-3 position-static">
-              <span class="input-group-text" id="addon-wrapping">NIS</span>
-              <input
-                type="text"
-                class="form-control position-static"
-                placeholder="Nomor Induk Siswa"
-                aria-label="NIS"
-                aria-describedby="addon-wrapping"
-              />
+        <div class="master-data">
+          <span class="mt-3 fw-bold">Tambah Akun dengan Role : </span>
+          <!-- MD Tab -->
+          <div class="md-tabs">
+            <ul class="nav nav-tabs d-flex p-0 m-0 justify-content-between">
+              <li class="nav-item w-25">
+                <a
+                  id="master-murid"
+                  class="nav-link text-center active"
+                  aria-current="page"
+                  href="#"
+                  >Murid</a
+                >
+              </li>
+              <li class="nav-item w-25">
+                <a id="master-yayasan" class="nav-link text-center" href="#"
+                  >Yayasan</a
+                >
+              </li>
+              <li class="nav-item w-25">
+                <a id="master-admin" class="nav-link text-center" href="#"
+                  >Admin</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- MD Content -->
+          <div class="md-content">
+            <span class="md-content-warning"
+              >Harap isi data dibawah dengan lengkap!
+            </span>
+            <!-- content murid -->
+            <div id="md-murid" class="md-murid">
+              <div class="left-side-murid">
+                <!-- NIS -->
+                <div class="input-box-left">
+                  <label for="nis" class="fw-bold"
+                    >NIS <span class="text-danger">*</span></label
+                  >
+                  <input
+                    id="nis"
+                    type="text"
+                    placeholder="Nomor Induk Siswa"
+                    class="md-input-style"
+                  />
+                </div>
+                <!-- Nama Murid -->
+                <div class="input-box-left">
+                  <label for="nama-d-murid" class="fw-bold"
+                    >Nama Siswa/i<span class="text-danger">*</span></label
+                  >
+                  <div class="d-flex gap-5">
+                    <input
+                      id="nama-d-murid"
+                      type="text"
+                      placeholder="Nama Depan"
+                      class="w-100 md-input-style"
+                    />
+                    <input
+                      id="nama-b-murid"
+                      type="text"
+                      placeholder="Nama Belakang"
+                      class="w-100 md-input-style"
+                    />
+                  </div>
+                </div>
+                <!-- Alamat -->
+                <div class="input-box-left">
+                  <label for="alamat-murid" class="fw-bold"
+                    >Alamat <span class="text-danger">*</span></label
+                  >
+                  <input
+                    id="alamat-murid"
+                    type="text"
+                    placeholder="Alamat Rumah"
+                    class="md-input-style"
+                  />
+                </div>
+                <!-- Tmpt Lahir -->
+                <div class="input-box-left">
+                  <label for="tplahir-murid" class="fw-bold"
+                    >Tempat Lahir <span class="text-danger">*</span></label
+                  >
+                  <input
+                    id="tplahir-murid"
+                    type="text"
+                    placeholder="Kota/Kabupaten"
+                    class="md-input-style"
+                  />
+                </div>
+                <!-- Tgl Lahir -->
+                <div class="input-box-left">
+                  <label for="tglahir-murid" class="fw-bold"
+                    >Tanggal Lahir <span class="text-danger">*</span></label
+                  >
+                  <input
+                    id="tglahir-murid"
+                    type="date"
+                    class="md-input-style"
+                  />
+                </div>
+                <!-- Kelas -->
+                <div class="input-box-left">
+                  <label for="kelas-murid" class="fw-bold"
+                    >Kelas <span class="text-danger">*</span></label
+                  >
+                  <div class="dropdown">
+                    <button
+                      class="dd-kelas btn dropdown-toggle w-100"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      SD <span id="kelas-title">Kelas 1</span>
+                    </button>
+                    <ul class="dropdown-menu w-100">
+                      <li>
+                        <a id="kls-1" class="dropdown-item" href="#">Kelas 1</a>
+                      </li>
+                      <li>
+                        <a id="kls-2" class="dropdown-item" href="#">Kelas 2</a>
+                      </li>
+                      <li>
+                        <a id="kls-3" class="dropdown-item" href="#">Kelas 3</a>
+                      </li>
+                      <li>
+                        <a id="kls-4" class="dropdown-item" href="#">Kelas 4</a>
+                      </li>
+                      <li>
+                        <a id="kls-5" class="dropdown-item" href="#">Kelas 5</a>
+                      </li>
+                      <li>
+                        <a id="kls-6" class="dropdown-item" href="#">Kelas 6</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- input ini hanya berguna untuk menangkap input
+                    dari dd kelas diatas => d-none -->
+                  <input
+                    id="kelas-murid"
+                    type="text"
+                    placeholder="1"
+                    value=""
+                    class="d-none"
+                  />
+                </div>
+              </div>
+              <div class="right-side-murid">
+                <!-- Jenis Kelamin -->
+                <div class="input-box-right">
+                  <label for="" class="fw-bold"
+                    >Jenis Kelamin <span class="text-danger">*</span></label
+                  >
+                  <form action="#" class="w-100 d-flex justify-content-around">
+                    <div class="con-laki">
+                      <label for="laki">Laki-laki</label>
+                      <input
+                        type="radio"
+                        id="laki"
+                        name="jkMurid"
+                        value="Laki-laki"
+                      />
+                    </div>
+                    <div class="con-perem">
+                      <label for="perempuan">Perempuan</label>
+                      <input
+                        type="radio"
+                        id="perempuan"
+                        name="jkMurid"
+                        value="perempuan"
+                      />
+                    </div>
+                  </form>
+                </div>
+                <!-- No HP Ortu/Wali -->
+                <div class="input-box-right">
+                  <label for="nohp-murid" class="fw-bold"
+                    >No HP <span class="text-danger">*</span></label
+                  >
+                  <input
+                    id="nohp-murid"
+                    type="number"
+                    placeholder="No. HP Ortu/Wali"
+                    class="md-input-style"
+                  />
+                </div>
+                <!-- Foto -->
+                <div class="input-box-right mt-4">
+                  <span class="fw-bold"
+                    >Foto Siswa/i <span class="text-danger">*</span></span
+                  >
+                  <label for="foto-murid" class="lblFoto fw-bold"
+                    ><i class="bi bi-cloud-arrow-up fs-3"></i>Upload Foto</label
+                  >
+                  <input
+                    type="file"
+                    class="bg-warning"
+                    id="foto-murid"
+                    accept=".jpg, .jpeg, .png, .psd"
+                  />
+                </div>
+              </div>
             </div>
+            <!-- content yayasan -->
+            <div id="md-yayasan" class="md-yayasan d-none">ini yayasan</div>
+            <!-- content admin -->
+            <div id="md-admin" class="md-admin d-none">ini admin</div>
 
-            <div class="input-group mb-3 position-static">
-              <input
-                type="text"
-                class="form-control position-static"
-                placeholder="Nama Siswa/i"
-                aria-label="Nama Siswa/i"
-                aria-describedby="basic-addon2"
-              />
-              <span class="input-group-text position-static" id="basic-addon2"
-                >Nama</span
-              >
-            </div>
-
-            <div class="input-group mb-3">
-              <label
-                class="input-group-text position-static"
-                for="inputGroupSelect01"
-                >Jenis Kelamin</label
-              >
-              <select class="form-select" id="inputGroupSelect01">
-                <option value="1">Laki-laki</option>
-                <option value="2">Perempuan</option>
-              </select>
-            </div>
-
-            <div class="input-group mb-3">
-              <span class="input-group-text">+62</span>
-              <input
-                type="text"
-                class="form-control"
-                aria-label="nomor hp ortu/wali"
-                placeholder="858 XXXX XXXX"
-              />
-              <span class="input-group-text">No.HP Ortu</span>
-            </div>
-
-            <div class="input-group flex-nowrap mb-3">
-              <span class="input-group-text" id="addon-wrapping">Alamat</span>
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Jl. xxxx, Komp. xxxx, No. xxxx"
-                aria-label="alamat"
-                aria-describedby="addon-wrapping"
-              />
-            </div>
-
-            <div class="input-group mb-3">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Kab/Kota, Provinsi"
-                aria-label="tempat lahir"
-                aria-describedby="basic-addon2"
-              />
-              <span class="input-group-text" id="basic-addon2"
-                >Tempat Lahir</span
-              >
-            </div>
-
-            <div class="input-group flex-nowrap mb-3">
-              <span class="input-group-text" id="addon-wrapping"
-                >Tanggal Lahir</span
-              >
-              <input
-                type="date"
-                class="form-control"
-                placeholder=""
-                aria-label="alamat"
-                aria-describedby="addon-wrapping"
-              />
-            </div>
-
-            <div class="input-group mb-3">
-              <select class="form-select" id="inputGroupSelect01">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-              </select>
-              <label class="input-group-text" for="inputGroupSelect01"
-                >Kelas</label
-              >
-            </div>
-
-            <div class="input-group mb-3">
-              <label class="input-group-text" for="inputGroupFile01"
-                >Foto</label
-              >
-              <input type="file" class="form-control" id="inputGroupFile01" />
-            </div>
-
-            <div class="input-group mb-3">
-              <input
-                type="password"
-                class="form-control"
-                placeholder="xxxxxxxx"
-                aria-describedby="basic-addon2"
-              />
-              <span class="input-group-text" id="basic-addon2">Password</span>
-            </div>
-
-            <div class="input-group mb-3">
-              <span class="input-group-text" id="basic-addon2"
-                >Confirm Password</span
-              >
-              <input
-                type="password"
-                class="form-control"
-                placeholder="xxxxxxxx"
-                aria-describedby="basic-addon2"
-              />
+            <div class="md-con-btn mt-5">
+              <button class="btn md-tambah">Tambah</button>
+              <button class="btn md-bersih">Bersih</button>
             </div>
           </div>
-          <div class="md-tam-yayasan">
-            <span class="md-header">Tambah Akun Yayasan</span>
-          </div>
-          <div class="md-tam-admin">
-            <span class="md-header">Tambah Akun Admin</span>
-          </div>
-        </div> -->
+        </div>
       </div>
       <!-- End Semua Tagihan -->
     </div>
