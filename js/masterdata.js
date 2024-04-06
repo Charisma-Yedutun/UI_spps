@@ -15,6 +15,8 @@ let formActive = "murid";
 
 muridSelect.onclick = function () {
   formActive = "murid";
+  btnAddUser.classList.remove("active-md");
+  open = false;
   if (!muridSelect.classList.contains("active")) {
     // tab
     muridSelect.classList.add("active");
@@ -34,6 +36,8 @@ muridSelect.onclick = function () {
 };
 yayasanSelect.onclick = function () {
   formActive = "yayasan";
+  btnAddUser.classList.remove("active-md");
+  open = false;
   if (!yayasanSelect.classList.contains("active")) {
     muridSelect.classList.remove("active");
     yayasanSelect.classList.add("active");
@@ -52,6 +56,8 @@ yayasanSelect.onclick = function () {
 };
 adminSelect.onclick = function () {
   formActive = "admin";
+  btnAddUser.classList.remove("active-md");
+  open = false;
   if (!adminSelect.classList.contains("active")) {
     muridSelect.classList.remove("active");
     yayasanSelect.classList.remove("active");
@@ -73,7 +79,22 @@ adminSelect.onclick = function () {
 let formMurid = document.getElementById("md-murid");
 let formYayasan = document.getElementById("md-yayasan");
 let formAdmin = document.getElementById("md-admin");
+let open = false;
+// lanjut disini
 btnAddUser.onclick = function () {
+  btnAddUser.classList.toggle("active-md");
+  open = !open;
+  if (open === true) {
+    btnAddUser.innerHTML =
+      '<i id="scale-btn" class="bi bi-x-lg text-white"></i>';
+  } else if (open === false && formActive === "murid") {
+    btnAddUser.innerHTML = "Tambah Murid";
+  } else if (open === false && formActive === "yayasan") {
+    btnAddUser.innerHTML = "Tambah Yayasan";
+  } else if (open === false && formActive === "admin") {
+    btnAddUser.innerHTML = "Tambah Admin";
+  }
+
   if (formActive == "murid") {
     formMurid.classList.toggle("d-none");
   } else if (formActive == "yayasan") {

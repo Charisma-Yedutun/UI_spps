@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../css/style.css" />
     <title>SPPS Pelita Hati</title>
   </head>
+
   <body id="body">
     <!-- Start Sidebar -->
     <div class="sidebar">
@@ -134,52 +135,83 @@
       </nav>
       <!-- End Navbar -->
 
-      <!-- Start Dashboard -->
+      <!-- Start Semua Tagihan -->
       <div class="main-content">
-        <div class="header">
-          <span class="d-block w-100 fs-2 pb-3 fw-bold">Dashboard</span>
-          <div class="cards">
-            <div class="kartu">
-              <div class="card-logo rounded-circle">
-                <i class="bi bi-bank"></i>
-              </div>
-              <div class="card-name">
-                Pemasukan
-                <div class="price">Rp. xxx.xx<span> / hari</span></div>
-              </div>
+        <div class="header h-auto">
+          <span class="d-block w-100 fs-2 pb-3 fw-bold">Pemasukan</span>
+        </div>
+        <div class="pemasukan">
+          <div class="pencatatan-pem">
+            <div class="con-btn-tampem">
+              <button id="toggle-form" class="btn text-black">
+                Tambah Pemasukan
+              </button>
             </div>
-            <div class="kartu">
-              <div class="card-logo rounded-circle">
-                <i class="bi bi-coin"></i>
+            <div id="form-tam-pem" class="con-pen-pem">
+              <div class="left-pen-pem">
+                <div class="input-box-pem">
+                  <label for="ket">Keterangan Pemasukan :</label>
+                  <input id="ket" type="text" placeholder="SPP" />
+                </div>
+                <div class="input-box-pem">
+                  <label for="jum">Jumlah :</label>
+                  <input id="jum" type="text" placeholder="Rp. xxx. xxx" />
+                </div>
               </div>
-              <div class="card-name">
-                Pengeluaran
-                <div class="price">Rp. xxx.xx<span> / hari</span></div>
-              </div>
-            </div>
-            <div class="kartu">
-              <div class="card-logo rounded-circle">
-                <i class="bi bi-people"></i>
-              </div>
-              <div class="card-name">
-                Siswa Aktif
-                <div class="price">xxx.xx</div>
+              <div class="right-pen-pem">
+                <div class="input-box-pem">
+                  <label for="tgl">Tanggal Pemasukan :</label>
+                  <input id="tgl" type="date" />
+                </div>
+                <div class="input-box-pem">
+                  <label for="bukpem" class="bukpem"
+                    ><i class="bi bi-cloud-arrow-up fs-3"></i>Bukti
+                    Pemasukan</label
+                  >
+                  <input
+                    id="bukpem"
+                    type="file"
+                    class="d-none"
+                    accept="image/*"
+                  />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="chart-container">
-          <div class="chart">
-            <canvas id="myChart"></canvas>
+          <div class="tabel-pem">
+            <div id="tabel-murid" class="md-tabel-murid">
+              <span class="fw-bold">Pencatatan Pemasukan : </span>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">ID Pemasukan</th>
+                    <th scope="col">Ket. Pemasukan</th>
+                    <th scope="col">Jumlah Pemasukan</th>
+                    <th scope="col">Tanggal Pemasukan</th>
+                    <th scope="col">Bukti Pemasukan</th>
+                    <th scope="col">Admin</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="bg-danger">
+                    <th scope="row">1010</th>
+                    <td>SPP bulan April</td>
+                    <td>Rp. 100.000</td>
+                    <td>10/10/2024</td>
+                    <td>bukti.jpg</td>
+                    <td>Admin 1</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
-      <!-- End Dashboard -->
+      <!-- End Semua Tagihan -->
     </div>
     <!-- End Content -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="../bootstrap/js/bootstrap.js"></script>
+    <script src="../bootstrap/js/bootstrap.bundle.js"></script>
     <script src="../js/script.js"></script>
-    <script src="../js/dashboard.js"></script>
+    <script src="../js/pemasukan.js"></script>
   </body>
 </html>
